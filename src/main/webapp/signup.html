@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign up</title>
+	<style>
+		body {
+			background-color: #f7f7f7;
+			font-family: Arial, sans-serif;
+		}
+		
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: #555;
+		}
+		
+		
+		form {
+			max-width: 500px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 10px #aaa;
+			border-radius: 5px;
+			position: relative;
+			animation: slide 1s ease forwards;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #555;
+		}
+		
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			font-size: 16px;
+		}
+		
+		input[type="radio"] {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		
+		button[type="submit"],
+		button[type="button"] {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			background-color: #1abc9c;
+			border: none;
+			color: #fff;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+			transition: all 0.3s ease;
+			z-index: 1;
+		}
+		
+		button[type="submit"]::before,
+		button[type="button"]::before {
+			content: '';
+			position: absolute;
+			background-color: rgba(255,255,255,0.3);
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			transition: all 0.3s ease;
+		}
+		
+		button[type="submit"]:hover::before,
+		button[type="button"]:hover::before {
+			left: 0;
+		}
+		
+		button[type="submit"]:hover {
+			background-color: #16a085;
+		}
+		
+		button[type="button"] {
+			background-color: #ccc;
+			margin-top: 10px;
+		}
+		
+		button[type="button"]:hover {
+			background-color: #bbb;
+		}
+		
+		@keyframes slide {
+			from {
+				top: -50px;
+				opacity: 0;
+			}
+			to {
+				top: 0;
+				opacity: 1;
+			}
+		}
+	</style>0
+</head>
+<body>
+	<h1>Sign up</h1>
+	<form action="XYZ"  method="post">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+		
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		
+		<label for="tel">Phone number:</label>
+		<input type="number" id="number" name="number" required>
+		
+		<label>Gender:</label>
+		<label for="male"><input type="radio" id="male" name="gender" value="male" required> Male</label>
+		<label for="female"><input type="radio" id="female" name="gender" value="female" required> Female</label>
+		
+		<button type="submit">Sign up</button>
+		<button type="button" onclick="window.location.href='index.html'">Cancel</button>
+	</form>
+	<br><br>
+	
+</body>
+</html>
